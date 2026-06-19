@@ -1,5 +1,5 @@
 #!/bin/sh
-# Dotfiles install script for Void Linux + mango/labwc Wayland setup
+# Dotfiles install script for Void Linux + mango Wayland setup
 set -e
 
 DOTFILES="$(cd "$(dirname "$0")" && pwd)"
@@ -48,8 +48,6 @@ link config/rofi           "$HOME/.config/rofi"
 link config/foot           "$HOME/.config/foot"
 link config/alacritty      "$HOME/.config/alacritty"
 link config/ghostty        "$HOME/.config/ghostty"
-link config/noctalia       "$HOME/.config/noctalia"
-link config/labwc          "$HOME/.config/labwc"
 link config/wal            "$HOME/.config/wal"
 link config/gtk-3.0        "$HOME/.config/gtk-3.0"
 link config/xdg-desktop-portal "$HOME/.config/xdg-desktop-portal"
