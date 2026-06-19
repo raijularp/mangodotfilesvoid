@@ -1,0 +1,52 @@
+@import "/home/chris/.cache/wal/colors-waybar.css";
+
+* {
+    font-family: "Iosevka Nerd Font", monospace;
+    font-size: 13px;
+    border: none;
+    min-height: 0;
+}
+
+window#waybar {
+    background: alpha(@color0, 0.88);
+    border-radius: 0;
+}
+
+.modules-left {
+    padding: 4px 14px;
+}
+.modules-center {
+    padding: 4px 20px;
+}
+.modules-right {
+    padding: 4px 14px;
+}
+
+#custom-void {
+    color: @foreground;
+    padding: 0 10px 0 0px;
+    font-size: 16px;
+    margin-left: -8px;
+}
+
+#workspaces button {
+    color: alpha(@foreground, 0.35);
+    padding: 0 5px;
+    min-width: 0;
+}
+#workspaces button.active {
+    color: @foreground;
+}
+#workspaces button.urgent {
+    color: @color1;
+}
+
+#clock {
+    color: @foreground;
+    padding: 0 8px;
+}
+
+#cpu, #memory, #pulseaudio {
+    color: alpha(@foreground, 0.75);
+    padding: 0 8px;
+}

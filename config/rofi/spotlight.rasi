@@ -1,0 +1,91 @@
+* {
+    bg-col:       #1a1a1ecc;
+    bg-col-light: #2a2a30aa;
+    border-col:   #ffffff22;
+    selected-col: #3a3a4488;
+    fg-col:       #e8e8eaff;
+    fg-col2:      #b8b8bcff;
+    grey:         #888890ff;
+
+    width: 1000px;
+}
+
+window {
+    transparency: "real";
+    background-color: @bg-col;
+    border: 1px;
+    border-color: @border-col;
+    border-radius: 18px;
+    padding: 0px;
+}
+
+mainbox {
+    background-color: transparent;
+    padding: 24px;
+    children: [inputbar, mode-switcher, listview];
+    spacing: 16px;
+}
+
+inputbar {
+    background-color: @bg-col-light;
+    border-radius: 12px;
+    padding: 10px 16px;
+    children: [entry];
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg-col;
+    placeholder: "Search";
+    placeholder-color: @grey;
+    font: "IosevkaTerm Nerd Font 12";
+}
+
+mode-switcher {
+    spacing: 8px;
+}
+
+button {
+    background-color: @bg-col-light;
+    text-color: @fg-col2;
+    border-radius: 10px;
+    padding: 8px 18px;
+    font: "IosevkaTerm Nerd Font 11";
+}
+
+button selected {
+    background-color: @selected-col;
+    text-color: @fg-col;
+}
+
+listview {
+    columns: 2;
+    lines: 5;
+    spacing: 6px 24px;
+    fixed-height: false;
+    fixed-columns: true;
+    background-color: transparent;
+}
+
+element {
+    padding: 8px 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    orientation: horizontal;
+}
+
+element selected {
+    background-color: @selected-col;
+}
+
+element-icon {
+    size: 28px;
+    padding: 0 12px 0 0;
+    vertical-align: 0.5;
+}
+
+element-text {
+    text-color: @fg-col;
+    vertical-align: 0.5;
+    font: "IosevkaTerm Nerd Font 11";
+}

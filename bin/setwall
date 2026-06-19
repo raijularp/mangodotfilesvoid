@@ -1,0 +1,6 @@
+#!/bin/sh
+wal -i "$1"
+pkill swaybg
+swaybg -i "$1" -m fill &
+pkill waybar
+waybar &

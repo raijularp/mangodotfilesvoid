@@ -1,0 +1,69 @@
+* {
+    font: "IosevkaTerm Nerd Font 12";
+}
+
+configuration {
+    modi: "drun";
+    show-icons: true;
+    icon-theme: "Papirus";
+    drun-display-format: "{name}";
+    disable-history: false;
+}
+
+window {
+    width: 25%;
+    border-radius: 10px;
+    border: 1px;
+    border-color: #979AA1;
+    background-color: #0c0e16;
+    padding: 8px;
+}
+
+mainbox {
+    children: [inputbar, listview];
+    spacing: 8px;
+}
+
+inputbar {
+    background-color: #161820;
+    text-color: #dddee2;
+    padding: 8px;
+    border-radius: 8px;
+    children: [entry];
+}
+
+entry {
+    placeholder: "Search apps...";
+    placeholder-color: #888890;
+    text-color: #dddee2;
+}
+
+listview {
+    lines: 6;
+    spacing: 2px;
+    fixed-height: false;
+}
+
+element {
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+element normal {
+    text-color: #dddee2;
+    background-color: transparent;
+}
+
+element selected {
+    background-color: #979AA1;
+    text-color: #0c0e16;
+}
+
+element-icon {
+    size: 20px;
+    padding: 0 8px 0 0;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
