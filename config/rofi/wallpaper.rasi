@@ -1,0 +1,43 @@
+@import "~/.config/rofi/config.rasi"
+
+window {
+    width: 60%;
+    background-color: @background;
+}
+
+mainbox {
+    background-color: @background;
+}
+
+entry {
+    placeholder: "Search wallpapers...";
+    background-color: transparent;
+}
+
+listview {
+    background-color: @background;
+    columns: 4;
+    lines: 2;
+    spacing: 8px;
+    fixed-height: false;
+}
+
+element {
+    background-color: @background;
+    orientation: vertical;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+element-icon {
+    size: 150px;
+    horizontal-align: 0.5;
+    padding: 0;
+    background-color: transparent;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    background-color: transparent;
+}
