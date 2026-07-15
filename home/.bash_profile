@@ -6,6 +6,7 @@ export LANG=en_US.utf8
 export LC_ALL=en_US.utf8
 export XCURSOR_THEME=aosp-cursors
 export XCURSOR_SIZE=24
+export QT_QPA_PLATFORMTHEME=kde
 
 if [ -z "$WAYLAND_DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
     eval $(dbus-launch --sh-syntax)

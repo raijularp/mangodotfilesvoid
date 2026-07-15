@@ -1,5 +1,6 @@
 #!/bin/sh
-swww img "$1" --transition-type fade --transition-duration 1
-wal -i "$1" -n
+wal -i "$1"
+pkill swaybg
+swaybg -i "$1" -m fill &
 pkill waybar
 waybar &

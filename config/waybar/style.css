@@ -1,8 +1,8 @@
 @import "/home/chris/.cache/wal/colors-waybar.css";
 
 * {
-    font-family: "IosevkaTerm Nerd Font", monospace;
-    font-size: 15px;
+    font-family: "Gallant12", monospace;
+    font-size: 14px;
     border: none;
     min-height: 0;
 }

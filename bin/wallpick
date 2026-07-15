@@ -1,27 +1,7 @@
 #!/bin/sh
 export LANG=en_US.UTF-8
-
-WALLS=~/walls
-THUMBS=~/.cache/wallpicker/thumbs
-mkdir -p "$THUMBS"
-
-MENU=""
-for wall in "$WALLS"/*; do
-    [ -f "$wall" ] || continue
-    name=$(basename "$wall")
-    thumb="$THUMBS/$name.png"
-    if [ ! -f "$thumb" ] || [ "$wall" -nt "$thumb" ]; then
-        magick "$wall" -resize 300x169^ -gravity center -extent 300x169 "$thumb" 2>/dev/null
-    fi
-    MENU="${MENU}${name}\0icon\0037${thumb}\n"
-done
-
-WALL_NAME=$(printf "%b" "$MENU" | rofi -dmenu -i -show-icons -p "Wallpaper" -theme ~/.config/rofi/wallpaper.rasi)
-[ -z "$WALL_NAME" ] && exit
-
-WALL="$WALLS/$WALL_NAME"
-[ -f "$WALL" ] || exit
-
+WALL=$(nsxiv -t -o ~/walls/)
+[ -z "$WALL" ] && exit
 swww img "$WALL" --transition-type fade --transition-duration 1
 wal -i "$WALL" -n
 pkill waybar

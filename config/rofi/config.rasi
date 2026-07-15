@@ -1,3 +1,5 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
 * {
     font: "IosevkaTerm Nerd Font 12";
 }
@@ -14,8 +16,8 @@ window {
     width: 25%;
     border-radius: 10px;
     border: 1px;
-    border-color: #979AA1;
-    background-color: #0c0e16;
+    border-color: @active;
+    background-color: @background;
     padding: 8px;
 }
 
@@ -25,8 +27,8 @@ mainbox {
 }
 
 inputbar {
-    background-color: #161820;
-    text-color: #dddee2;
+    background-color: @background-alt;
+    text-color: @foreground;
     padding: 8px;
     border-radius: 8px;
     children: [entry];
@@ -35,7 +37,7 @@ inputbar {
 entry {
     placeholder: "Search apps...";
     placeholder-color: #888890;
-    text-color: #dddee2;
+    text-color: @foreground;
 }
 
 listview {
@@ -49,14 +51,24 @@ element {
     border-radius: 6px;
 }
 
-element normal {
-    text-color: #dddee2;
+element normal.normal {
+    text-color: @foreground;
     background-color: transparent;
 }
 
-element selected {
-    background-color: #979AA1;
-    text-color: #0c0e16;
+element alternate.normal {
+    text-color: @foreground;
+    background-color: transparent;
+}
+
+element selected.normal {
+    background-color: @active;
+    text-color: @background;
+}
+
+element alternate.selected {
+    background-color: @active;
+    text-color: @background;
 }
 
 element-icon {
